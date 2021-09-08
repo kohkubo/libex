@@ -10,8 +10,10 @@ obj		= $(src:%.c=%.o)
 # ***********************************
 
 src =\
+	./arr_to_str.c \
 	./arraylen.c \
 	./contain.c \
+	./count_char.c \
 	./debug_array.c \
 	./free_set.c \
 	./free_string_array.c \
@@ -51,6 +53,9 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+init:
+	bash header.sh libex.h Makefile
 
 # ***********************************
 
